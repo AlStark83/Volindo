@@ -16,7 +16,7 @@ export default async function Page() {
 				<div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
 					{data.map(
 						(item: { id: string; title: string; description: string }) => (
-							// <li key={item.id}>
+
 							<a
 								key={item.id}
 								href={`https://localhost:3000/notes/${item.id}`}
@@ -26,19 +26,17 @@ export default async function Page() {
 							>
 								<h2 className={`mb-3 text-2xl font-semibold w-full`}>
 									♦ {item.title}{" "}
-									{/* <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+									{/* <span className="text-red-800 inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+               X
             </span> */}
 								</h2>
 								<p className={`m-0 text-sm opacity-50 w-full`}>
 									{item.description}
 								</p>
 							</a>
-							// </li>
 						)
 					)}
 				</div>
-				// </ul>
 			}
 		</main>
 	);
