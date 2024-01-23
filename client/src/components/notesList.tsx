@@ -9,17 +9,18 @@ async function getData() {
 
 export default async function Page() {
 	const data = await getData();
+
 	return (
 		<main>
 			{
 				// <ul>
-				<div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
+				<div className="mb-32 grid text-center lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-left">
 					{data.map(
 						(item: { id: string; title: string; description: string }) => (
 
 							<a
 								key={item.id}
-								href={`https://localhost:3000/notes/${item.id}`}
+								href={`http://localhost:3000/notes/${item.id}`}
 								className="rounded-lg border border-transparent transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
 								// target="_blank"
 								// rel="noopener noreferrer"
